@@ -1,0 +1,53 @@
+/*
+	Primary.css
+	The main stylesheet for the week 4 sample site
+	Author:	Debra Carino
+	Date:	10/23/2019
+*/
+
+h1 {
+	background-color: silver;
+	width: 65%;
+	min-width: 100px;
+	max-width: 1000px;
+	/*padding: 10px;  /*Applies the same amount of padding to all 4 sides*/
+	/*Apply padding individually to the top, left, right, bottom edges
+	  of our content using individual properties 
+	  padding-left: 300px;
+	  padding-bottom: 50px;
+	*/
+	padding: 10px 30px;
+	margin: 10px auto;
+}
+
+h2 {
+	background-color: navy;
+	color: white;
+	width: 80%;
+	padding: 10px 100px 50px 25px;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main {
+	width: 80%;
+	background-color: silver;
+	padding: 10px;
+	margin: 10px auto;
+	/*border: 3px dotted navy;*/
+	border-top-style: dotted;
+	border-bottom-style: dashed;
+	border-left-style: solid;
+	border-right-style: groove;
+	border-top-width: 3px;
+	border-bottom-width: 5px;
+	border-left-width: 1px;
+	border-right-width: 8px;
+	border-top-color: red;
+	border-bottom-color: green;
+	border-left-color: purple;
+	border-right-color: navy;
+	border-right: 10px solid yellow;
+}

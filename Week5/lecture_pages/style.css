@@ -1,0 +1,44 @@
+header,nav,article,section,footer{
+    margin: 1em;
+    padding: 1em;
+    background-color: silver;
+}
+
+h1{
+    font-size: 150%;
+    font-style: bold;
+}
+
+h2{
+    font-size: 125%;
+    font-style: bold;
+}
+
+.row{
+    clear: both;
+}
+
+/*Each element that is a column needs two things
+1. width (em, rem, %, px)
+2. float each element in one consistent direction
+*/
+
+nav p{
+    width: 25%;
+    float: left;
+}
+
+article{
+    width: 40%;
+    float:left;
+}
+
+section.single{
+    width: 15%;
+    float:left;
+}
+
+section.double{
+    width:40%;
+    float:left;
+}

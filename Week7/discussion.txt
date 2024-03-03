@@ -1,0 +1,16 @@
+ontinue working on turning your homepage into the page pictured in your wireframe. This week:
+
+Add all the styles the you already knew you needed to achieve your wireframe
+Start all the styles that you had a pretty good idea were needed to achieve your wireframe
+Begin research on the additional styles you need to complete your idea
+
+When you've finished these steps, create a discussion forum post here that:
+Has your wireframe attached
+This will likely be the same info you posted a few weeks ago. You're reposting it here for convenient reference to maximize the helpful feedback you'll get from others. It is also okay if you have updated your wireframe to something a little different!
+Has a zipped folder with your HTML code & CSS styles attached
+The body of your post should:
+discuss which elements of your wireframe are complete 
+describe what elements you have left to go
+list what resources you are using to research how to complete your remaining steps
+
+Respond helpfully to the posts of one or more other students. You may want to include a link to a resource that you've found helpful, shed light or provide confirmation that the posted starting point will work for the desired layout, comment on any improvements you might suggest for their semantic HTML markup, or suggest items to add to the "will need to be researched" list, or ask questions you have about how the wireframe, HTML markup, and CSS are connected. This is a graded part of the activity. All students will need 1 content post by Wednesday and at least 1 reply posts by Friday.

@@ -1,0 +1,113 @@
+/* layout-day2.css
+   creating a page with stacked, multi-column layout,
+   plus a fixed, horizontal navigation bar
+*/
+
+
+/* Column layout styles                          */
+/*-----------------------------------------------*/
+section {
+	float: left;
+	width: 30%;
+	padding: 1.6%;
+}
+
+article {
+	float: left;
+	width: 38%;
+	padding: 1%;
+}
+/* option 1 for getting margin on 
+   only the first article 
+article#first {
+	margin-right: 20%;
+}*/
+
+/* option 2 for getting margin on 
+   only the first article */
+article:first-of-type {
+	margin-right: 20%;
+}
+
+header, footer, .row {
+	clear: both;
+}
+
+/* Navigation styles                             */
+/*-----------------------------------------------*/
+
+nav{
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+footer nav{
+	position: relative;
+}
+
+nav ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+nav ul li{
+	float:left;
+	
+}
+
+nav ul li a{
+	display: inline-block;
+	padding: 0em 2em;
+	background-color: silver;
+	border-right: 1px dotted maroon;
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	font-size: 1.2em;
+	background-color: white;
+}
+
+nav ul li a:focus{
+	font-size: 1.2em;
+	background-color: white;
+}
+
+/* CSS dropdown */
+.ddtrigger ul{
+	display: none;
+}
+
+.ddtrigger:hover ul{
+	display: block;
+	position: absolute;
+	background-color: silver;
+}
+
+.ddtrigger ul li{
+	float:none;
+} 
+
+.ddtrigger ul li a{
+	border-right: none;
+}
+
+.active {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/* Font styles                                   */
+/*-----------------------------------------------*/
+body {
+	font-family: abel, helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 210%;
+	font-family: 'Abril Fatface', arial, sans-serif;
+}

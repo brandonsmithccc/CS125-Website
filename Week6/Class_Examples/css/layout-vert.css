@@ -1,0 +1,128 @@
+/* Layout.css
+   Primary page element styles
+   3-column layout with header & footer
+   and a vertical navigation bar
+*/
+
+/* reset style - simple one                      */
+/*-----------------------------------------------*/
+body, h1, h3, p, header, footer, main, nav, article {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-size: 100%;
+ }
+
+/* Layout styles                                 */
+/*-----------------------------------------------*/
+ body {
+	width: 85%;
+	margin: 0 auto;
+ }
+ 
+ header, footer {
+	background-color: #ba0016;
+	color: #ffffff;
+	padding: 2%;
+ }
+ 
+ main {
+	background-color: #ffffff;
+	float: left;
+	width: 56%;
+	margin: 1% 2%;
+ }
+ 
+ article {
+	background-color: #a79898;
+	float: left;
+	width: 21%;
+	padding: 2%;
+ }
+ 
+ nav {
+	background-color: #1f1576;
+	color: white;
+	float: left;
+	width: 11%;
+	padding: 2%;
+ }
+ 
+ footer {
+	clear: both;
+	padding: 2%;
+ }
+ 
+ p {
+	padding-bottom: 0.5em;
+}
+ 
+/* Navigation bar styles                         */
+/*-----------------------------------------------*/
+/* Remove margins, padding, bullets from ul */
+
+nav ul{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+}
+
+/* Format the anchor tags inside of li inside of nav */
+nav ul li a{
+	display: block;
+	color: white;
+	padding: 1em;
+	border-bottom: 1px solid silver;
+	text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+	font-size:1.2em;
+	color:yellow;
+	border-bottom: 1px solid yellow;
+}
+
+nav ul li a:hover::before{
+	content:'> ';
+}
+
+.active{
+	font-size:1.2em;
+	color:yellow;
+	border-bottom: 1px solid yellow;
+
+}
+/* 
+   If you use code or code inspiration from the list-a-matic or similar sites, please cite your source. Something like:
+   Navigation bar styles inspired by code found at   http://css.maxdesign.com.au/listamatic/vertical18.htm
+*/
+
+
+
+
+
+
+
+
+/* Font styles                                   */
+/*-----------------------------------------------*/
+body {
+	font-family: abel, helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 210%;
+	font-family: 'Abril Fatface', arial, sans-serif;
+}
+
+h2, h3 {
+	font-size: 150%;
+}
+
+footer {
+	text-align: center;
+	font-style: italic;
+	
+}
+

@@ -1,0 +1,280 @@
+/*
+Name: Brandon Smith
+Date: 2-21-24
+Assignment: CS 125H - Lab 6
+
+Gradient code from: https://cssgradient.io
+Grid code: https://www.w3schools.com/css/css_grid.asp
+
+*/
+
+/*custom global variables*/
+:root{
+    --western-bluebird:#2c5fca;
+    --tundra-swan: #fdead2f8;
+    --coot: #000106;
+}
+
+a{
+    color:var(--western-bluebird);
+}
+a:hover{
+    color:blue;
+}
+
+header, nav, article, aside, section, footer{
+    margin:1em;
+    padding:1em;
+    background-color: silver;
+}
+/* row styles */
+.row{
+    clear: both;
+}
+/* header styles */
+
+header{
+    border: 0.3em solid rgba(110, 83, 24, 0.5);
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(209, 205, 205) 0%, rgba(230,210,185,0.55) 35%, rgba(44,95,202,0.5) 90%);
+    padding: 2em;
+    height: 5em;
+    width: 90%;
+    clear:both;
+}
+
+#header-left-image{
+    float:left;
+    width:100px;
+}
+
+#header-left-image img{
+    border: 1px solid black;
+    width: 100px;
+}
+
+#header-text{
+    margin: 0% 5% 0% 5%;
+    float:left;
+    width:35%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+#header-text h1{
+    font-size: 150%;
+}
+
+#header-text h3{
+    font-size: 105%;
+    font-style: italic;
+}
+
+#header-right-image{
+    float:left;
+    width:20%;
+}
+#header-right-image img{
+    width: 100px;
+}
+
+/* Navigation styles */                       
+/*-----------------------------------------------*/
+
+nav{
+	position: relative;
+}
+
+footer nav{
+	position: relative;
+}
+
+nav ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+nav ul li{
+	float:left;
+	
+}
+
+nav ul li a{
+	display: inline-block;
+	padding: 0em 2em;
+	background-color: silver;
+	border-right: 1px solid var(--western-bluebird);
+	text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:focus{
+	font-size: 1.2em;
+
+}
+
+/* CSS dropdown */
+.ddtrigger ul{
+	display: none;
+}
+
+.ddtrigger:hover ul{
+	display: block;
+	position: absolute;
+}
+
+.ddtrigger ul li{
+	float:none;
+} 
+
+.ddtrigger ul li a{
+	border-right: none;
+    padding: 0.5em;
+}
+
+.active {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/*************/
+#weekly-bird{
+    float:left;
+    width: 40%;
+    background-color: silver;
+    border: 1px solid black;
+    margin: 0.1em 1em 0.1em 1em;
+    clear:both;
+   
+}
+
+#weekly-bird h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 115%;
+    color:var(--western-bluebird);
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    
+}
+
+#weekly-bird-image{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid lightgray;
+}
+
+#grid-container{
+    float:left;
+    width: 45%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10px;
+    background-color: silver;
+    color: red;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0.1em 0.1em 0.1em 1em;
+}
+
+.grid-item{
+    border:1px solid black;
+}
+
+footer p{
+    position: relative;
+}
+
+#footer-name{
+    right: 40%;
+    position:fixed;
+}
+
+/* table formatting */
+
+main{
+    width:80%;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;;
+}
+
+figure, figcaption{
+	margin:0;
+	padding:0;
+}
+
+figure{
+	margin-top:0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    clear: both;
+}
+
+figcaption{
+    background-color: #CA972C;
+    border: 1px solid black;
+    font-size: 125%;
+    font-weight: bold;
+    width:93.1%;
+    padding:0.5em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    font-weight: bold;
+    padding:0.5em
+}
+
+th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+td{
+    padding-top: 0.5em;
+    padding-bottom:0.5em;
+}
+
+
+table{
+    border-collapse: collapse;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*https://stackoverflow.com/questions/6057609/prevent-nested-lists-bullet-points-within-a-html-table-cell-from-overflowing-c*/
+
+table ul{
+    list-style-type:disc;
+    list-style-position: inside;
+}
+
+table ul li{
+    margin-bottom:0em;
+}
+
+.middle-align{
+    vertical-align: middle;
+}
+
+tr:nth-child(even){
+    border-top: 2px solid black;
+}
+
+thead{
+    background-color: #CA972C;
+}

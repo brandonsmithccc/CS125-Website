@@ -1,0 +1,21 @@
+/*
+Primary.css
+
+*/
+
+h1{
+    background-color: silver;
+    border: 2px solid green;
+    border-left: 5px dashed blue;
+    border-bottom: 20px dotted yellow;
+}
+
+h2{
+     background-color: navy;
+     color:white;
+     padding: 10px 100px 50px;
+}
+
+p{
+    padding:10px;
+}

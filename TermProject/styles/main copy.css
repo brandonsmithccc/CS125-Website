@@ -1,0 +1,160 @@
+/*
+Name: Brandon Smith
+Date: 2-10-24
+Assignment: CS 125H - Lab 4
+
+Gradient code from: https://cssgradient.io
+*/
+
+/*custom global variables*/
+:root{
+    --western-bluebird:#2c5fca;
+    --tundra-swam: #e6d2b9;
+    --coot: #000106;
+}
+
+/*global styles*/
+h1{
+    font-size: 140%;
+}
+h2{
+    font-size: 120%;
+}
+h3{
+    font-size: 112.5%;
+}
+
+a{
+    color:var(--western-bluebird)
+}
+a:hover{
+    color:blue;
+}
+
+/* header styles */
+
+#main-header h1{
+    text-align: center;
+    text-align: center;
+    vertical-align: center;
+    font-size: 200%;
+    width: 60%;
+}
+
+
+#header-duck{
+    float:left;
+    width: 20%;
+    min-width: 5%;
+}
+
+#header-creeper{
+    width:20%;
+    float:right;
+    padding-top: 1%;
+    min-width: 5%;
+}
+
+header{
+    border: 0.3em solid rgba(110, 83, 24, 0.5);
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(209, 205, 205) 0%, rgba(230,210,185,0.55) 35%, rgba(44,95,202,0.5) 90%);
+    clear:both;
+}
+
+header *{
+    display: inline-block;
+}
+
+#main-header{
+    margin: 2em;
+    padding-bottom: .05em;
+}
+/* body styles */
+body{
+    width: 90%;
+    background-color: rgba(235, 222, 206, 0.55);
+}
+
+body h2, h3{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* main styles */
+.main-paragraph{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+/* nav styles */
+.nav-bar{
+    padding: 20px 30px;
+}
+
+.nav-list li{
+    list-style: none;
+}
+
+
+
+.nav-bar{
+    display:flex;
+    position:sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    background: var(--western-bluebird);
+    background-blend-mode: darken;
+    background-size: cover;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li{
+    margin-right: 20px;
+    font-size: 110%;
+}
+
+
+.nav-list li:last-child{
+    margin-right: 0;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover{
+    color: var(--coot);
+}
+
+.rightNav{
+    text-align: right;
+}
+
+
+
+.small-button{
+    background-color: lightgray;
+    color:#2c5fca;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+
+/* footer style */
+footer{
+    text-align: center;
+}
+

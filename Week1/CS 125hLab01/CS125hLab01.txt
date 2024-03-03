@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Lab 1 - Brandon Smith</title>
+		<!-- Name: Brandon Smith
+			 Date: 1/8/24
+			 Course: CS-125H Lab 1 
+		-->
+		<meta charset="utf-8">
+	</head>
+	
+	<body>
+		<h1>Lab 1 - Intro to the Internet, the WWW, and HTML by Brandon Smith</h1>
+		<hr>
+		
+		<h2>Concept Questions</h2>
+		
+		What is the difference between the World Wide Web and the Internet?
+		
+		In Figure 1-1 in the textbook (The components of a web application), which of the 5 concepts
+		pictured would be a <em>client</em>?
+		
+		What does each letter in the initialism HTTP represent?
+		
+		How is the server role different when processing a static web page versus a dynamic web page?
+		
+		How do web developers know which HTML tags will work in their code?
+		
+		Why is it important to create web pages in such a way so that they are accessible in the 
+		widest possible array of browsing devices, including non-visual devices?
+		
+		What are some folder and file-naming guidelines you should follow for materials destined
+		for the web?
+		
+		List the steps to view the HTML code for any web page from within the browser window. 
+		Please specify which browser you are working with.
+		
+		List the steps to open an HTML file you have saved to your hard drive into a text editing
+		environment.
+		
+		Why is it a good idea for web developers to have multiple web browser applications installed?
+		
+		What is meant by the term "Responsive Web Design"?
+		
+		You need to validate your web page (stat!), what do you do? And why do you need this?
+		
+	
+	</body>
+</html>

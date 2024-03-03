@@ -1,0 +1,66 @@
+figure, figcaption{
+    margin:0;
+    padding:0;
+}
+
+figure{
+    border: 1px solid black;
+    width: 450px;
+    padding: 15px;
+}
+
+figcaption{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 120%;
+    padding-bottom: 0.25em;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 0.2em 0.7em;
+    text-align: right;
+}
+
+th:first-child, td:first-child{
+    text-align: left;
+}
+
+th:first-child{
+    vertical-align: bottom;
+}
+
+th:nth-child(2), td:nth-child(2){
+    text-align: center;
+}
+
+th:nth-child(2){
+    text-align: center; /*centers sales*/
+}
+
+tr:nth-child(2) th{
+    text-align: right;
+}
+
+tbody tr:nth-child(even){
+    background-color: lightyellow;
+}
+
+th.left, td.left{
+    text-align: left;
+}
+
+thead, tfoot{
+    background-color: lightgreen;
+}
+
+tfoot{
+    font-weight: bold;
+}

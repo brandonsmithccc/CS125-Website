@@ -33,6 +33,10 @@ a:hover{
 
 /* header styles */
 
+header{
+    display:flex;
+}
+
 #main-header h1{
     text-align: center;
     text-align: center;
@@ -102,14 +106,15 @@ body h2, h3{
 .nav-bar{
     display:flex;
     position:sticky;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content:space-between;
     top: 0px;
     background: var(--western-bluebird);
     background-blend-mode: darken;
     background-size: cover;
     color: white;
     padding: 10px 20px;
+    border-radius: 1em;
 }
 
 .nav-list{
@@ -140,6 +145,8 @@ body h2, h3{
 
 .rightNav{
     text-align: right;
+    align-items: flex-end;
+    flex-grow:1;
 }
 
 

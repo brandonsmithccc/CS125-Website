@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Week 8 Sample</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="styles/primary.css">
+	</head>
+	
+	<body>
+			<main>
+			<h1>Week 8 Sample</h1>
+			
+			<p>Practice using various HTML5 form elements:</p>
+			
+			<form 
+			   action="mailto:dcarino@clackamas.edu"
+			   method="post">
+				<!-- All form elements go here -->
+				<label>Name:</label>
+				<input type="text" name="txtName" id="txtName"
+				placeholder="Last, First M">
+				<br><br>
+				<label>Email:</label>
+				<input type="email" name="txtEmail" id="txtEmail" placeholder="sample@domain.com">
+				<br><br>
+				<label>Phone:</label>
+				<input type="tel" name="txtPhone" id="txtPhone" placeholder="xxx-xxx-xxxx">
+				<br><br>
+				<label>Password:</label>
+				<input type="password" name="txtPass" id="txtPass">
+				<br><br>
+
+				Please select your favorite page:<br>
+				<input type="radio" name="radFav" id="radFav1" value="Home">Home
+				<input type="radio" name="radFav" id="radFav2" value="Catalog">Catalog
+				<input type="radio" name="radFav" id="radFav3" value="About Us">About Us
+				<br><br>
+
+				Please select your <em>least</em> favorite page:<br>
+				<input type="radio" name="radLeastFav" id="radLeastFav1" value="Home">Home
+				<input type="radio" name="radLeastFav" id="radLeastFav2" value="Catalog">Catalog
+				<input type="radio" name="radLeastFav" id="radLeastFav3" value="About Us">About Us
+				<br><br>
+
+				Please select the page(s) you visited:<br>
+				<input type="checkbox" name="chkVisit1" id="chkVisit1" value="Home">Home
+				<input type="checkbox" name="chkVisit2" id="chkVisit2" value="Catalog">Catalog
+				<input type="checkbox" name="chkVisit3"
+				id="chkVisit3" value="About Us">About Us
+				<br><br>
+				When did you visit our site?
+				<input type="date" name="calVisitDate" id="calVisitDate">
+				<br>
+				Other comments:
+				<br>
+				<textarea name="txtComments" id="txtComments" rows="8"
+				cols="60" placeholder="Default text"></textarea>
+				<br><br>
+				What is your favorite color?
+				<select name="favColor" id="favColor">
+					<option value="_default"></option>
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+				</select>
+				<br><br>
+				<input type="submit" name="btnSubmit" id="btnSubmit"
+				value="Submit">
+				<input type="reset" name="btnReset" id="btnReset">
+				<button id="bigButton">Big Button</button>
+			</form>
+		</main>
+	</body>
+</html>

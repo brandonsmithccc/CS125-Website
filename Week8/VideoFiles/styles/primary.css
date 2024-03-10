@@ -1,0 +1,79 @@
+body {
+	text-align:center;
+	font-family:arial, helvetica, sans-serif;
+	background-color: silver;
+	}
+	
+main {
+	text-align: left;
+	width: 60%;
+	margin: 10px auto;
+	background-color:white;
+	padding: 10px;
+	border: double medium navy;
+	}
+	
+h1, h2 {
+	clear:both;
+	color:navy;
+	border-bottom: solid thin navy;
+	text-align: center;
+	}
+	
+h1 {
+	margin-top: 40px;
+}
+
+h2 {
+  color:#fff;
+  background-color: navy;
+  padding-top:0;
+  }
+
+table caption {
+	font-style: italic;
+	font-size: smaller;
+	color: navy;
+	font-family: Georgia, "Times New Roman", Times, serif;	
+}
+
+/*========= Form Styles ============*/
+
+input{
+	background-color: #dfdfff;
+	box-shadow: #fff;
+	border-radius: 0.3rem;
+	padding:0.1rem;
+}
+
+input[type=reset]{
+	background-color: lightgrey;
+}
+input[type=submit]{
+	color:white;
+	background-color: maroon;
+	border-radius: 0.5rem;
+	padding:0.25rem;
+	margin-left:35%;
+	text-transform: uppercase;
+}
+
+input[type=reset]{
+	border-radius: 0.5rem;
+	padding:0.25rem;
+	margin-left: 5%;
+	margin-right:35%;
+}
+
+textarea{
+	border-radius: 0.5rem;
+}
+
+form label{
+	display:block;
+	float:left;
+	width: 7rem;
+	padding:0;
+	margin: 5px 0 0;
+	text-align: left;
+}

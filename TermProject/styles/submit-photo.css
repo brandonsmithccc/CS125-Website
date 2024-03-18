@@ -1,0 +1,238 @@
+/*
+Name: Brandon Smith
+Date: 2-21-24
+Assignment: CS 125H - Lab 6
+
+Gradient code from: https://cssgradient.io
+Grid code: https://www.w3schools.com/css/css_grid.asp
+
+*/
+
+/*custom global variables*/
+:root{
+    --western-bluebird:#2c5fca;
+    --tundra-swan: #e6d2b9;
+    --coot: #000106;
+    --light-blue: #C8D4E3;
+    --dark-blue: #a5b9e2;
+}
+
+*{
+    font-family: "Playfair Display", serif;
+}
+
+.playfair-display-font {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+a{
+    color:var(--western-bluebird);
+}
+a:hover{
+    color:blue;
+}
+
+header, nav, article, aside, section, footer{
+    margin:1em;
+    padding:1em;
+    background-color: silver;
+}
+/* row styles */
+.row{
+    clear: both;
+}
+
+/* nav styles */
+.logo{
+    font-weight: bold;
+}
+.main-navigation{
+    display:flex;
+    justify-content:space-between;
+    padding: 0.5rem;
+    gap: 1rem;
+    background-color: var(--light-blue);
+}
+
+.logo{
+    border:none;
+}
+.menu{
+    display:flex;
+    justify-content:space-between;
+    padding:0.5rem;
+    list-style-type: none;
+    gap:1rem;
+}
+
+.menu li{
+    padding: 0.5rem;
+    position:relative;
+    list-style-type: none;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+.menu li .submenu{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    margin-top: 0.5rem;
+    top: 1.8rem;
+    z-index: 2;
+}
+
+.menu li:hover .submenu{
+    display: block;
+    border-radius: .2rem;
+    text-align: left;
+    cursor: pointer;
+    left: -1rem;
+    margin-top:0.5rem;
+}
+
+.menu li:hover .submenu li{
+    width:100%;
+    margin:0;
+    padding: 0.5rem;
+    background-color: var(--dark-blue);
+}
+
+.search{
+    margin-right: 1rem;
+    padding: 0.5rem;
+}
+
+.search input, .search button{
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* body styles */
+body{
+    width: 90%;
+    background-color: rgba(235, 222, 206, 0.55);
+}
+
+body h2, h3{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/*main formatting*/
+main{
+    width:80%;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;;
+}
+
+main h1{
+    text-align: center;
+    margin-top:1rem;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+main h3{
+    text-align: center;
+    font-size: 90%;
+    font-style: italic;
+    margin-bottom:1rem;
+}
+
+#contact-info, #bird-info, #finish-form{
+    border: 2px solid black;
+    padding:1em;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    margin-bottom: 1rem;
+    font-size: 110%;
+}
+
+legend{
+    font-size: 125%;
+    font-weight: bold;
+    color: var(--western-bluebird)
+}
+
+#contact-info input{
+    margin-left:6rem;
+    border-radius: 0.5rem;
+    margin-top:0.5rem;
+    width:15rem;
+    background-color: var(--tundra-swan);
+}
+
+#contact-info label{
+    position: absolute;
+    margin-top:0.5rem;
+    margin-bottom: 1rem;
+}
+
+#bird-info input{
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+#bird-info label{
+    position: absolute;
+}
+
+#file-upload{
+    position: absolute;
+    margin-right: 10rem;
+}
+
+select{
+    font-size:110%;
+}
+
+#opt-in{
+    margin-bottom: 1rem;
+}
+
+#opt-in-label{
+    font-size:80%;
+}
+#submit-buttons {
+    display: flex;
+    flex-direction: horizontal;
+    align-content: space-between;
+    gap:8rem; 
+
+}
+
+#submit-button, #reset-button{
+    height:2rem;
+    width:6rem;
+    padding:0.2rem;
+    border:2px solid var(--western-bluebird);
+    border-radius: 1rem;
+    box-shadow: none;
+    background-color: var(--tundra-swan);
+    font-size: 90%;
+}
+
+#opt-in-label em {
+    font-style: italic; /* why did I have to do this? */
+}
+
+
+/*footer formatting*/
+footer p{
+    position: relative;
+}
+
+#footer-name{
+    right: 40%;
+    position:fixed;
+}

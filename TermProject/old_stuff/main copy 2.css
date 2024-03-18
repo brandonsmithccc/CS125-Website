@@ -11,18 +11,12 @@ Gradient code from: https://cssgradient.io
     --western-bluebird:#2c5fca;
     --tundra-swan: #e6d2b9;
     --coot: #000106;
-    --light-blue: #C8D4E3;
-    --dark-blue: #a5b9e2;
-}
-
-*{
-    font-family: "Playfair Display", serif;
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
 }
 
 /*global styles*/
+
+/*<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 900*/
 
 .playfair-display-font {
   font-family: "Playfair Display", serif;
@@ -48,7 +42,7 @@ a:hover{
     color:blue;
 }
 
-/* header styles 
+/* header styles */
 
 .header{
     display:flex;
@@ -72,56 +66,8 @@ a:hover{
 .header-image img{
     width:10em;
     height:auto;
-}*/
-
-/* nav styles */
-nav{
-    background-color: var(--light-blue);
-    padding:0.5rem;
-}
-.logo{
-    font-weight: bold;
-    border:none;
-    font-size: 125%;
-    padding: 1rem 1rem 1rem 0.5rem;
 }
 
-.menu .submenu{
-    list-style-type: none;
-}
-
-.menu{
-    display:flex;
-    justify-content:space-between;
-    padding:0.5rem;
-    gap:1rem;
-    font-size: 120%;
-    background-color: var(--light-blue);
-}
-
-.menu a{
-    text-decoration: none;
-}
-
-.nav-item{
-    padding:1rem;
-}
-
-.nav-item a:hover::after{
-    color:var(--dark-blue);
-}
-
-
-.search{
-    margin-right: 1rem;
-    padding: 0.5rem;
-}
-
-.search input, .search button{
-    margin-left: 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 75;
-}
 
 /* body styles */
 body{
@@ -140,14 +86,83 @@ body h2, h3{
     padding-right: 3%;
 }
 
-.row{
+
+/* nav styles */
+
+.main-navigation{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    
 }
 
+.menu{
+    list-style-type: none;
+    display:flex;
+    gap:2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 0.5rem;
+    position:relative;
+    list-style-type: none;
+    border: 1px solid var(--western-bluebird);
+    border-radius: 0.5rem;
+    background-color: lightgray;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+.menu li .submenu{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    margin-top: 0.5rem;
+    left: 0;
+    z-index: 2;
+}
+
+.menu li:hover .submenu{
+    display: block;
+    border-radius: .2rem;
+    text-align: left;
+    cursor: pointer;
+    left: -1rem;
+    margin-top:0.5rem;
+}
+
+.menu li:hover .submenu li{
+    border: 1px solid var(--western-bluebird);
+    border-radius: .5rem;
+    width:100%;
+    margin:0;
+    padding: 0.5rem;
+    background-color: lightgrey;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+
+.right-nav input, .right-nav button{
+    margin-left: 0.5rem;
+}
 
 #weekly-bird{
+    float:left;
+    width: 40%;
+    background-color: silver;
+    border: 1px solid black;
     margin: 0.1em 1em 0.1em 1em;
+    clear:both;
+   
 }
 
 #weekly-bird h2{
@@ -161,37 +176,37 @@ body h2, h3{
 }
 
 #weekly-bird-image{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:80%;
-    border-radius: 1rem;
+    height:auto;
+    padding:1em;
+    border: 1px solid lightgray;
 }
-
 
 #grid-container{
     padding: 0.5rem;
-    height:auto;
+    float:left;
+    width: 45%;
     display: grid;
     grid-template-columns: 45% 45%;
-    gap: 1rem;
+    gap: 10px;
+    background-color: silver;
+    color: red;
     text-align: center;
+    border: 1px solid black;
     margin: 0.1em 0.1em 0.1em 1em;
 }
 
 #grid-container img{
-    width:auto;
-    height:auto;
     border-radius: 0.5rem;
 }
 
 .grid-item{
     border:2px solid var(--western-bluebird);
-    height:auto;
     border-radius: 0.5rem;
-    padding: 1rem;
-}
-
-.grid-item a{
-    font-size: 120%;
-    text-decoration: none;
+    padding: 0.5rem;
 }
 
 #bins, #identifying, #rare-birds, #locations{
@@ -200,7 +215,24 @@ body h2, h3{
     border: 1px solid black;
 }
 
+
+
+
+#list-demo{
+    clear:both;
+    margin-top:2rem;
+}
+
 /* table formatting */
+
+main{
+    width:80%;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;;
+}
 
 figure, figcaption{
 	margin:0;
@@ -275,7 +307,6 @@ thead{
 
 /* footer style */
 footer{
-    clear:both;
-    text-align: left;
+    text-align: center;
 }
 

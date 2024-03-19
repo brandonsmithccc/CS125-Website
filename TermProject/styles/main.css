@@ -1,9 +1,9 @@
 /*
 Name: Brandon Smith
-Date: 2-10-24
-Assignment: CS 125H - Lab 4
+Assignment: Term Project
 
-Gradient code from: https://cssgradient.io
+Sources: 
+https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t
 */
 
 /*custom global variables*/
@@ -13,23 +13,26 @@ Gradient code from: https://cssgradient.io
     --coot: #000106;
     --light-blue: #C8D4E3;
     --dark-blue: #a5b9e2;
+    --dark-blue-light:rgba(168,185,226,.95);
+    --main-bg-color: rgba(202, 151, 44, 0.2);
 }
 
 *{
-    font-family: "Playfair Display", serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
 
-/*global styles*/
-
-.playfair-display-font {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+img{
+    max-width: 100%;
 }
+
+
+
+
+/*global styles*/
 
 h1{
     font-size: 140%;
@@ -44,41 +47,27 @@ h3{
 a{
     color:var(--western-bluebird)
 }
+
+
 a:hover{
     color:blue;
 }
 
-/* header styles 
-
-.header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 0.3em solid rgba(110, 83, 24, 0.5);
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgb(209, 205, 205) 0%, rgba(230,210,185,0.55) 35%, rgba(44,95,202,0.5) 90%);
-    padding:0.25em;
-
+.small-menu{
+    display: none;
 }
-
-.header-title{
-    text-align: center;
-    text-align: center;
-    vertical-align: center;
-    font-size: 125%;
-    font-family: "Playfair Display", serif;
-}
-
-.header-image img{
-    width:10em;
-    height:auto;
-}*/
 
 /* nav styles */
 nav{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: var(--light-blue);
     padding:0.5rem;
+    margin-left:auto;
+    width:95%;
+    border:0px solid black;
+    
 }
+
 .logo{
     font-weight: bold;
     border:none;
@@ -86,31 +75,84 @@ nav{
     padding: 1rem 1rem 1rem 0.5rem;
 }
 
+
 .menu .submenu{
     list-style-type: none;
 }
 
 .menu{
     display:flex;
-    justify-content:space-between;
+    justify-content:space-between; /*equal space between items*/
+    align-items: center; /*align vertical centers*/
     padding:0.5rem;
     gap:1rem;
     font-size: 120%;
     background-color: var(--light-blue);
+    list-style-type: none;
 }
 
 .menu a{
     text-decoration: none;
 }
 
-.nav-item{
+.menu li a{
+    display: block;
+    padding: 0.3rem 0.1rem;
+}
+
+.menu li.subitem a{
+    padding: 0.3rem 0.1rem;
+    /* display: none; */
+}
+.item{
+    position: relative;
+    display:block;
     padding:1rem;
+    width:auto;
+    text-align: center;
+    
 }
 
-.nav-item a:hover::after{
-    color:var(--dark-blue);
+.active .item{
+    display: block;
+
+    
 }
 
+.item:not(.button) a:hover,
+.item a:hover::after{
+    color:black;
+    text-decoration: underline;
+}
+
+/*submenus*/
+.submenu{
+    display:none;
+    padding:0.5rem;
+}
+
+.has-submenu > a::after{
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 900;
+    content: "\f078";
+    padding-left:0.4rem;
+}
+
+.submenu a{
+    padding: .675rem 1rem;
+    
+}
+
+.has-submenu:hover .submenu{
+    display: block;
+    position: absolute;
+    left:2rem;
+    top:4rem;
+    background-color: var(--dark-blue-light);
+    border-radius: 0.2rem;
+}
 
 .search{
     margin-right: 1rem;
@@ -120,13 +162,17 @@ nav{
 .search input, .search button{
     margin-left: 0.5rem;
     border-radius: 0.5rem;
-    font-size: 75;
+    font-size: 75%;
+    padding:0.2rem;
 }
+
+
+
 
 /* body styles */
 body{
-    width: 90%;
-    background-color: rgba(235, 222, 206, 0.55);
+    width: 95%;
+    background-color: var(--main-bg-color);
 }
 
 body h2, h3{
@@ -135,25 +181,28 @@ body h2, h3{
 }
 
 /* main styles */
-.main-paragraph{
-    padding-left: 3%;
-    padding-right: 3%;
-}
 
 .row{
     display: flex;
     justify-content: space-between;
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 0px solid black;
+    gap:0;
 }
 
 
-#weekly-bird{
-    margin: 0.1em 1em 0.1em 1em;
-}
+/*#weekly-bird{
+    margin-left:auto;
+    margin-right: auto;
+    width:50%;
+}*/
 
 #weekly-bird h2{
     text-align: center;
     font-weight: bold;
-    font-size: 115%;
+    font-size: 125%;
     color:var(--western-bluebird);
     margin-bottom: 0.5em;
     padding-top: 0.5em;
@@ -161,32 +210,32 @@ body h2, h3{
 }
 
 #weekly-bird-image{
-    width:80%;
     border-radius: 1rem;
+    width:95%;
+    height:auto;
 }
 
 
 #grid-container{
     padding: 0.5rem;
-    height:auto;
     display: grid;
-    grid-template-columns: 45% 45%;
-    gap: 1rem;
-    text-align: center;
-    margin: 0.1em 0.1em 0.1em 1em;
+    height:auto;
+    grid-template-columns: 50% 50%;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 #grid-container img{
-    width:auto;
-    height:auto;
     border-radius: 0.5rem;
+    height:auto;
+    padding-bottom: 0.5rem;
 }
 
 .grid-item{
-    border:2px solid var(--western-bluebird);
-    height:auto;
+    border:0px solid var(--western-bluebird);
     border-radius: 0.5rem;
-    padding: 1rem;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .grid-item a{
@@ -194,88 +243,165 @@ body h2, h3{
     text-decoration: none;
 }
 
-#bins, #identifying, #rare-birds, #locations{
-    max-width:100%;
-    height:auto;
-    border: 1px solid black;
-}
-
-/* table formatting */
-
-figure, figcaption{
-	margin:0;
-	padding:0;
-}
-
-figure{
-	margin-top:0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    width:95%;
-    clear: both;
-}
-
-figcaption{
-    background-color: #CA972C;
-    border: 1px solid black;
-    font-size: 125%;
-    font-weight: bold;
-    width:93.1%;
-    padding:0.5em;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th{
-    font-weight: bold;
-    padding:0.5em
-}
-
-th, td{
-    border: 1px solid black;
-    text-align: center;
-}
-
-td{
-    padding-top: 0.5em;
-    padding-bottom:0.5em;
-}
-
-
-table{
-    border-collapse: collapse;
-    width:95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*https://stackoverflow.com/questions/6057609/prevent-nested-lists-bullet-points-within-a-html-table-cell-from-overflowing-c*/
-
-table ul{
-    list-style-type:disc;
-    list-style-position: inside;
-}
-
-table ul li{
-    margin-bottom:0em;
-}
-
-.middle-align{
-    vertical-align: middle;
-}
-
-tr:nth-child(even){
-    border-top: 2px solid black;
-}
-
-thead{
-    background-color: #CA972C;
-}
-
 /* footer style */
 footer{
-    clear:both;
     text-align: left;
 }
 
+#insta-logo{
+    max-width:100%;
+    width:1rem;
+}
+
+/*mobile menu*/
+
+@media screen and (width < 500px) {
+    .menu{
+        display: none;
+    }
+    
+    nav{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color: var(--light-blue);
+        padding:0.5rem;
+        margin-left:auto;
+        width:95%;
+        border:1px solid black;
+        
+    }
+    
+    .logo{
+        font-weight: bold;
+        border:none;
+        font-size: 125%;
+        padding: 1rem 1rem 1rem 0.5rem;
+        text-align:center;
+    }
+    
+    
+    .small-menu .submenu{
+        list-style-type: none;
+        
+    }
+    
+    .small-menu{
+        display:flex;
+        flex-direction: column;
+        padding:0.5rem;
+        gap:1rem;
+        font-size: 120%;
+        background-color: var(--light-blue);
+        list-style-type: none;
+
+    }
+
+    .small-menu li{
+        margin:0px;
+        padding:0px;
+        text-align: left;
+    }
+
+    .has-submenu > a::after{
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 900;
+        content: "\f061";
+        padding-left:0.4rem;
+    }
+    
+    .small-menu a{
+        text-decoration: none;
+    }
+    
+    .small-menu li a{
+        display: block;
+        padding: 0.3rem 0.1rem;
+    }
+    
+    .small-menu li.subitem a{
+        padding: 0.3rem 0.1rem;
+    }
+    .item{
+        position: relative;
+        display:block;
+        padding:1rem;
+        width:auto;
+        text-align: center;
+        
+    }
+    
+    .active .item{
+        display: block;
+    }
+    
+    .item:not(.button) a:hover,
+    .item a:hover::after{
+        color:black;
+        text-decoration: underline;
+    }
+    
+    /*submenus*/
+    .submenu{
+        display:none;
+        padding:0.5rem;
+    }
+    
+    .submenu a{
+        padding: .675rem 1rem;
+        
+    }
+    
+    .has-submenu:hover .submenu{
+        display: none;
+        text-decoration: none;
+    }
+    
+    .search{
+        display:none;
+    }
+
+    #weekly-bird{
+        padding-top: 0.5rem;
+        font-size: .9rem;
+
+    }
+
+    #weekly-bird-image{
+        margin-top: 1rem;
+        margin-left:0.5rem;
+        padding:0.5rem
+    }
+
+    /*grid stuff*/
+
+    .grid-item{
+        padding:0.3rem;
+
+    }
+    .grid-item a{
+        font-size: .8rem;
+    }
+    
+    #eq-desc{
+        margin-bottom: 1rem;
+    }
+
+    #grid-container{
+        gap: .1rem;
+        grid-template-columns: 50% 50%;
+    }
+
+    footer{
+        margin-top: 2rem;
+    }
+
+    footer ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    
+}

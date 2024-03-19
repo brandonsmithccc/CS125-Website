@@ -1,25 +1,15 @@
 /* table formatting */
 
-main{
-    width:80%;
-    float:left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 2em;;
-}
-
-figure, figcaption{
-	margin:0;
-	padding:0;
-}
-
 figure{
 	margin-top:0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    width:95%;
-    clear: both;
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
 }
 
 figcaption{
@@ -27,11 +17,8 @@ figcaption{
     border: 1px solid black;
     font-size: 125%;
     font-weight: bold;
-    width:93.1%;
     padding:0.5em;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 th{
@@ -47,14 +34,6 @@ th, td{
 td{
     padding-top: 0.5em;
     padding-bottom:0.5em;
-}
-
-
-table{
-    border-collapse: collapse;
-    width:95%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /*https://stackoverflow.com/questions/6057609/prevent-nested-lists-bullet-points-within-a-html-table-cell-from-overflowing-c*/

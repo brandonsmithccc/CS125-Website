@@ -29,4 +29,6 @@ HTML/CSS Stuff
 Navigation Bar
 https://www.geeksforgeeks.org/how-to-create-a-horizontal-navigation-bar-in-html-and-css/
 
+Reduce bullet spacing:
+https://stackoverflow.com/questions/4373046/css-control-space-between-bullet-and-li
 

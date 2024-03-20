@@ -1,9 +1,8 @@
 /*
-Name: Brandon Smith
-Assignment: Term Project
-
-Sources: 
-https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t
+Class:  CS 125H
+Assignment: Lab 9
+Date: 3-19-24
+Student: Brandon Smith
 */
 
 /*custom global variables*/
@@ -53,67 +52,98 @@ a:hover{
     color:blue;
 }
 
-.small-menu{
-    display: none;
-}
-
 /* nav styles */
-
-#nav_menu{
-    margin-bottom: 3rem;
+nav{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: var(--light-blue);
+    padding:0;
+    margin:auto;
+    margin-bottom: 2rem;
+    width:95%;
 }
 
-#nav_menu ul {
-    display: flex;
-    flex-basis: 95%;
-    font-size: 125%;
-    justify-content: space-evenly;
-	list-style-type: none;
-	position: relative;
-    background-color: var(--light-blue);
-}
-
-#nav_menu ul li {
-	flex-basis: 20%;             
-}
-
-#nav_menu ul li a {
-    display: block;
-    text-align: center;
-    padding: 2rem;
-    text-decoration: none;
-    background-color: var(--light-blue);
+.logo{
     font-weight: bold;
+    font-size: 125%;
+    padding: 0.5rem;
 }
 
-#nav_menu a.current {
-	color: white;
+
+.menu .submenu{
+    list-style-type: none;
 }
 
-#nav_menu ul ul {
-	width: 100%;
-    display: none;
-    position: absolute;
-    top: 100%;
+.menu{
+    display:flex;
+    justify-content:space-between; /*equal space between items*/
+    align-items: center; /*align vertical centers*/
+    flex-wrap: wrap;
+    padding:0.5rem;
+    gap:0rem;
+    font-size: 110%;
+    background-color: var(--light-blue);
+    list-style-type: none;
 }
 
-#nav_menu ul ul li {
-	float: none;
+.menu a{
+    text-decoration: none;
 }
 
-#nav_menu ul li:hover > ul {
-	display: block;
-    font-size:100%;
-    min-width: 6rem;
-    max-width:10rem;
-    color:white;
-}
-
-#nav_menu > ul::after {
-    content: "";
+.menu li a{
     display: block;
+    padding: 0.3rem 0.1rem;
+
 }
+
+.menu li.subitem a{
+    padding: 0.3rem 0.1rem;
+}
+
+.item{
+    position: relative;
+    display:block;
+    padding:1rem;
+    width:auto;
+    text-align: center;
+    
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after{
+    color:black;
+    text-decoration: underline;
+}
+
+/*submenus*/
+
+.submenu{
+    display:none;
+    padding:0.5rem;
+}
+
+.has-submenu > a::after{
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 900;
+    content: "\f078";
+    padding-left:0.4rem;
+}
+
+.submenu a{
+    padding: .675rem 1rem;
+    
+}
+
+.has-submenu:hover .submenu{
+    display: block;
+    position: absolute;
+    left:2rem;
+    top:4rem;
+    background-color: var(--dark-blue-light);
+    border-radius: 0.2rem;
+}
+
 
 
 .search{
@@ -154,6 +184,13 @@ body h2, h3{
     border: 0px solid black;
     gap:0;
 }
+
+
+/*#weekly-bird{
+    margin-left:auto;
+    margin-right: auto;
+    width:50%;
+}*/
 
 #weekly-bird h2{
     text-align: center;
@@ -222,68 +259,75 @@ footer ul{
     width:2rem;
 }
 
-
-/***********mobile menu***********/
-#mobile_menu {
+#mobile_menu{
 	display: none;
 }
 
-@media only screen and (max-width:1500px) {
-    #nav_menu ul {
-        font-size: 115%;
+/***********mobile menu***********/
+
+@media screen and (max-width: 500px) {
+    #full-menu{
+        display: none;
     }
 
-    .grid-item a{
-        font-size: 115%;
-    }
-}
-
-@media only screen and (max-width:1300px) {
-    #nav_menu{
-        margin-bottom: 2rem;
-        background-color: var(--light-blue);
+    #small-menu{
+        display: none;
     }
     
-    #nav_menu ul {
-        font-size: 100%;
-    }
-
-    .grid-item a{
-        font-size: 100%;
-    }
-}
-
-@media only screen and (max-width:1140px) {
-    #nav_menu{
-        margin-bottom: 2rem;
-        background-color: var(--light-blue);
-    }
-    
-    #nav_menu ul {
-        font-size: 80%;
-    }
-
-    .grid-item a{
-        font-size: 80%;
-    }
-}
-
-@media only screen and (max-width: 760px) {
-	#nav_menu {
+    .menu{
 		display: none;
 	}
-	#mobile_menu {
-		display: block;
-	}
 
-    #eq-desc{
-        margin-top:1rem;
+    .has-submenu > a::after{
+        display: none;
     }
 
+    .slicknav_menu{
+        background-color: #C8D4E3 !important;
+    }
+
+    .has-submenu:hover .submenu{
+        display: none;
+        background-color: var(--light-blue);
+        border-radius: 0.2rem;
+        margin: 0;
+        padding:0;
+    }
+    
+
+    /*grid stuff*/
+
+    .grid-item{
+        padding:0.3rem;
+
+    }
     .grid-item a{
+        font-size: .8rem;
+    }
+    
+    #eq-desc{
+        margin-bottom: 1rem;
+    }
+
+    #grid-container{
+        gap: .1rem;
+        grid-template-columns: 50% 50%;
+    }
+
+    footer{
+        display: inline;
+        margin-top: 2rem;
+        font-size: 80%;
+        column-count: 2;
+    }
+
+    footer ul{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    #weekly-bird h2{
         font-size: 100%;
     }
-	.slicknav_menu {
-		background-color: var(--light-blue) !important;
-	}
+
 }

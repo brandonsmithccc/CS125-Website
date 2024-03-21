@@ -17,101 +17,6 @@ Grid code: https://www.w3schools.com/css/css_grid.asp
     --dark-blue: #a5b9e2;
 }
 
-*{
-    font-family: "Playfair Display", serif;
-}
-
-.playfair-display-font {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-a{
-    color:var(--western-bluebird);
-}
-a:hover{
-    color:blue;
-}
-
-header, nav, article, aside, section, footer{
-    margin:1em;
-    padding:1em;
-    background-color: silver;
-}
-/* row styles */
-.row{
-    clear: both;
-}
-
-/* nav styles */
-.logo{
-    font-weight: bold;
-}
-.main-navigation{
-    display:flex;
-    justify-content:space-between;
-    padding: 0.5rem;
-    gap: 1rem;
-    background-color: var(--light-blue);
-}
-
-.logo{
-    border:none;
-}
-.menu{
-    display:flex;
-    justify-content:space-between;
-    padding:0.5rem;
-    list-style-type: none;
-    gap:1rem;
-}
-
-.menu li{
-    padding: 0.5rem;
-    position:relative;
-    list-style-type: none;
-}
-
-.menu li a{
-    text-decoration: none;
-}
-
-.menu li .submenu{
-    display: none;
-    position: absolute;
-    list-style-type: none;
-    margin-top: 0.5rem;
-    top: 1.8rem;
-    z-index: 2;
-}
-
-.menu li:hover .submenu{
-    display: block;
-    border-radius: .2rem;
-    text-align: left;
-    cursor: pointer;
-    left: -1rem;
-    margin-top:0.5rem;
-}
-
-.menu li:hover .submenu li{
-    width:100%;
-    margin:0;
-    padding: 0.5rem;
-    background-color: var(--dark-blue);
-}
-
-.search{
-    margin-right: 1rem;
-    padding: 0.5rem;
-}
-
-.search input, .search button{
-    margin-left: 0.5rem;
-    border-radius: 0.5rem;
-}
 
 /* body styles */
 body{
@@ -126,12 +31,19 @@ body h2, h3{
 
 /*main formatting*/
 main{
-    width:80%;
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
     float:left;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     margin-bottom: 2em;;
+}
+
+#cute-duck{
+    margin-top: 12rem;
+    max-width:40%;
 }
 
 main h1{
@@ -153,7 +65,7 @@ main h3{
     padding:1em;
     margin-left:auto;
     margin-right:auto;
-    width:80%;
+    width:100%;
     margin-bottom: 1rem;
     font-size: 110%;
 }
@@ -168,6 +80,7 @@ legend{
     margin-left:6rem;
     border-radius: 0.5rem;
     margin-top:0.5rem;
+    height: 1.5rem;
     width:15rem;
     background-color: var(--tundra-swan);
 }
@@ -176,6 +89,12 @@ legend{
     position: absolute;
     margin-top:0.5rem;
     margin-bottom: 1rem;
+}
+
+/*https://www.geeksforgeeks.org/how-to-align-placeholder-text-in-html/*/
+input[type="tel"]{
+    padding-left: 0.3rem;
+    padding-bottom: 0.1rem;
 }
 
 #bird-info input{
@@ -213,7 +132,7 @@ select{
 
 #submit-button, #reset-button{
     height:2rem;
-    width:6rem;
+    width:8rem;
     padding:0.2rem;
     border:2px solid var(--western-bluebird);
     border-radius: 1rem;
@@ -223,7 +142,7 @@ select{
 }
 
 #opt-in-label em {
-    font-style: italic; /* why did I have to do this? */
+    font-style: italic;
 }
 
 

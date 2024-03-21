@@ -1,15 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Common Oregon Backyard Birds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/backyard-birds.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script>
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+  <title>Backyard Birds</title>
 </head>
+
 <body>
-    <h1>Common Oregon Backyard Birds</h1>
-    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-    tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-    minus id quod maxime placeat facere possimus, omnis voluptas assumenda
-    est, omnis dolor repellendus.</p>
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html" id="logo">Birding with Brandon</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Identification</a>
+        <ul>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="visual.html">Visual</a></li>
+          <li><a href="auditory.html">Auditory</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Common Birds</a>
+        <ul>
+          <li><a href="backyard-birds.html">Backyard</a></li>
+          <li><a href="wild-birds.html">Wild</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Resources</a>
+        <ul>
+          <li><a href="https://merlin.allaboutbirds.org" target="_blank">Merlin</a></li>
+          <li><a href="https://ebird.org" target="_blank">eBird</a></li>
+          <li><a href="https://myodfw.com/wildlife-viewing/species/birds" target="_blank">ODFW</a>
+          </li>
+          <li><a href="https://www.audubon.org" target="_blank">Audubon</a></li>
+          <li><a href="https://oregonbirding.org" target="_blank">OBA</a></li>
+        </ul>
+      </li>
+      <li><a href="#">My Birding</a>
+        <ul>
+          <li><a href="https://ebird.org/profile/MzU0MTIwNw" target="_blank">eBird list</a></li>
+          <li><a href="personal-photos.html">Photos</a></li>
+          <li><a href="personal-recordings.html">Recordings</a></li>
+        </ul>
+      </li>
+      <li><a href="submit-photo.html">Submit your photo!</a></li>
+    </ul>
+  </nav>
+  <main>
+		<figure>
+			<figcaption> Common Backyard Birds</figcaption>
+			<div style="overflow-x:auto;"> <!--https://www.w3schools.com/howto/howto_css_table_responsive.asp-->
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Image</th>
+							<th>Sound</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><!--Song Sparrow-->
+							<td class="middle-align">Song Sparrow</td>
+							<td class="middle-align"><img src="images/song_sparrow.jpg"
+							alt="song sparrow"></td>
+							<td class="middle-align"> <audio controls src="https://www.allaboutbirds.org/guide/assets/sound/550973.mp3"></audio></td>
+						</tr>
+						<tr> <!--Lesser goldfinch-->
+							<td class="middle-align">Lesser Goldfinch</td>
+							<td class="middle-align"><img src="images/lesser_gold_finch.jpg"
+							alt="lesser goldfinch"></td>
+							<td class="middle-align"><audio controls src="https://www.allaboutbirds.org/guide/assets/sound/550617.mp3"></audio></td>
+						</tr>
+						<tr> <!--European Starling-->
+							<td class="middle-align">European Starling</td>
+							<td class="middle-align"><img src="images/starling.jpg"
+							alt="european starling"></td>
+							<td class="middle-align"><audio controls src="https://www.allaboutbirds.org/guide/assets/sound/543795.mp3"></audio></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</figure>
+  </main>
+<footer>
+  <ul>
+    <li>&copy; Brandon Smith</li>
+    <li><a href="https://www.instagram.com/birding_with_brandon/">
+      <img src="images/Instagram_Glyph_Gradient.png" id="insta-logo"
+      alt="instagram logo"></a>
+    </li>
+  </ul>
+</footer>
 </body>
+
 </html>

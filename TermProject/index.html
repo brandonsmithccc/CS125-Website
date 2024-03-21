@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,7 @@
   <link rel="stylesheet" href="styles/slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-	<script type="text/javascript">
+	<script>
     	$(document).ready(function(){
 			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     	});
@@ -50,18 +49,12 @@
       </li>
       <li><a href="#">My Birding</a>
         <ul>
-          <li><a href="#" target="_blank">eBird list</a></li>
+          <li><a href="https://ebird.org/profile/MzU0MTIwNw" target="_blank">eBird list</a></li>
           <li><a href="personal-photos.html">Photos</a></li>
           <li><a href="personal-recordings.html">Recordings</a></li>
         </ul>
       </li>
       <li><a href="submit-photo.html">Submit your photo!</a></li>
-      <li class="search">
-        <form class="search" action="https://www.google.com/?q=" +value method="post">
-          <input type="search" id="search-box" placeholder="Search">
-          <button class="search-button">Search</button>
-        </form>
-      </li>
     </ul>
   </nav>
   <main>
@@ -96,20 +89,21 @@
           </div>
 
           <div class="grid-item">
-            <a href="locations.html"><img src="images/fernhill_th.jpg" id="locations"><br>
+            <a href="locations.html"><img src="images/fernhill_th.jpg"
+            id="locations" alt="fernhill wetlands"><br>
               Top Oregon Birding Spots</a>
           </div>
         </div>
       </div>
   </main>
+  <footer>
+    <ul>
+      <li>&copy; Brandon Smith</li>
+      <li><a href="https://www.instagram.com/birding_with_brandon/">
+        <img src="images/Instagram_Glyph_Gradient.png" id="insta-logo"
+        alt="instagram logo"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
-<footer>
-  <ul>
-    <li>&copy; Brandon Smith</li>
-    <li><a href="https://www.instagram.com/birding_with_brandon/">
-      <img src="images/Instagram_Glyph_Gradient.png" id="insta-logo"></a>
-    </li>
-  </ul>
-</footer>
-
 </html>

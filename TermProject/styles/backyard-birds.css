@@ -1,0 +1,72 @@
+/* table formatting */
+
+figure{
+	margin-top:0.5em;
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+figcaption{
+    background-color: #CA972C;
+    border: 1px solid black;
+    font-size: 125%;
+    font-weight: bold;
+    padding:0.5em;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+    padding:0.5em
+}
+
+th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+td{
+    padding-top: 0.5em;
+    padding-bottom:0.5em;
+}
+
+/*https://stackoverflow.com/questions/6057609/prevent-nested-lists-bullet-points-within-a-html-table-cell-from-overflowing-c*/
+
+table ul{
+    list-style-type:disc;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+}
+
+table ul li{
+    margin-bottom:0em;
+}
+
+table li span {
+    position: relative;
+    left: 0.1rem;
+  }
+
+.middle-align{
+    vertical-align: middle;
+}
+
+tr:nth-child(even){
+    border-top: 2px solid black;
+}
+
+thead{
+    background-color: #CA972C;
+}
+
+table img{
+    max-width:80%;
+    max-height:200px;
+}

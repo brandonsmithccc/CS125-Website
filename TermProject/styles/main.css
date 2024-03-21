@@ -60,6 +60,7 @@ a:hover{
 /* nav styles */
 
 #nav_menu{
+    margin-left:2rem;
     margin-bottom: 3rem;
     background-color: var(--light-blue);
 }
@@ -80,8 +81,13 @@ a:hover{
 
 #nav_menu ul li a {
     display: block;
+    width:100%;
+    padding-top:2rem;
+    padding-bottom:1rem;
+    padding-right:1rem;
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
-    padding: 2rem;
     text-decoration: none;
     background-color: var(--light-blue);
     font-weight: bold;

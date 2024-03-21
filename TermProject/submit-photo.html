@@ -4,51 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" type = "text/css" href="/styles/reset.css">
-  <link rel="stylesheet" type = "text/css" href="/styles/main.css">
-  <link rel="stylesheet" type = "text/css" href="/styles/submit-photo.css">
-  <title>Birding with Brandon</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/submit-photo.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+  <title>Submit your photo</title>
 </head>
 <body>
-    <nav class="main-navigation">
-        <ul class="menu">
-          <li class="logo"><a href="./index.html">Birding with Brandon</a></li>
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="menu-item-has-children"><a href="#">Identification</a>
-            <ul class="submenu">
-              <li><a href="/equipment/equipment.html">Equipment</a></li>
-              <li><a href="#">Visual</a></li>
-              <li><a href="#">Auditory</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children"><a href="#">Common Birds</a>
-            <ul class="submenu">
-              <li><a href="#">Backyard</a></li>
-              <li><a href="#">Wild</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children"><a href="#">Resources</a>
-            <ul class="submenu">
-              <li><a href="https://merlin.allaboutbirds.org">Merlin</a></li>
-              <li><a href="https://ebird.org">eBird</a></li>
-              <li><a href="https://myodfw.com/wildlife-viewing/species/birds">ODFW</ah></li>
-              <li><a href="https://www.audubon.org">Audubon</a></li>
-              <li><a href="https://oregonbirding.org">OBA</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="#">Blog</a></li>
-          <li class="nav-item"><a href="./submit-photo/submit-photo.html">Submit your photo!</a></li>
-          <li>
-            <div class="search">
-              <input type="text"
-              id="search" placeholder="Search">
-              <button class="small-button">Search</button>
-            </div>
-          </li>
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html" id="logo">Birding with Brandon</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Identification</a>
+        <ul>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="visual.html">Visual</a></li>
+          <li><a href="auditory.html">Auditory</a></li>
         </ul>
-      </nav>
+      </li>
+      <li><a href="#">Common Birds</a>
+        <ul>
+          <li><a href="backyard-birds.html">Backyard</a></li>
+          <li><a href="wild-birds.html">Wild</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Resources</a>
+        <ul>
+          <li><a href="https://merlin.allaboutbirds.org" target="_blank">Merlin</a></li>
+          <li><a href="https://ebird.org" target="_blank">eBird</a></li>
+          <li><a href="https://myodfw.com/wildlife-viewing/species/birds" target="_blank">ODFW</a>
+          </li>
+          <li><a href="https://www.audubon.org" target="_blank">Audubon</a></li>
+          <li><a href="https://oregonbirding.org" target="_blank">OBA</a></li>
+        </ul>
+      </li>
+      <li><a href="#">My Birding</a>
+        <ul>
+          <li><a href="https://ebird.org/profile/MzU0MTIwNw" target="_blank">eBird list</a></li>
+          <li><a href="personal-photos.html">Photos</a></li>
+          <li><a href="personal-recordings.html">Recordings</a></li>
+        </ul>
+      </li>
+      <li><a href="submit-photo.html">Submit your photo!</a></li>
+      <li class="search">
+        <form class="search" action="https://www.google.com/?q=" +value method="post">
+          <input type="search" id="search-box" placeholder="Search">
+          <button class="search-button">Search</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
 
   <main>
+    <div id="form">
     <h1>Submit a Photo</h1>
     <h3>Oregon and Washington Only</h3>
     <form action="mailto:brandon@birdingwithbrandon.com" method="post">
@@ -89,12 +106,25 @@
         <input type="checkbox" id="opt-in" name="opt-in" value="opt-in" checked>
         <label for="opt-in" id="opt-in-label">Please sign me up for the <em>Birding with Brandon</em> newsletter</label>
         <div id="submit-buttons">
-          <input type="submit" id="submit-button">
+          <input type="submit" id="submit-button" value="Submit photo!">
           <input type="reset" id="reset-button">
         </div>
       </fieldset>
     </form>
-    
+    </div>
+    <div id="cute-duck">
+    <aside>
+      <img src="images/norther_shoveler.jpg">
+    </aside>
+    </div>
   </main>
+  <footer>
+    <ul>
+      <li>&copy; Brandon Smith</li>
+      <li><a href="https://www.instagram.com/birding_with_brandon/">
+        <img src="images/Instagram_Glyph_Gradient.png" id="insta-logo"></a>
+      </li>
+    </ul>
+  </footer>
 </body>  
 </html>

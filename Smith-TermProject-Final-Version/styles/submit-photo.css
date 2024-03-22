@@ -1,0 +1,157 @@
+/*
+Name: Brandon Smith
+Date: 2-21-24
+Assignment: CS 125H - Lab 6
+
+Gradient code from: https://cssgradient.io
+Grid code: https://www.w3schools.com/css/css_grid.asp
+
+*/
+
+/*custom global variables*/
+:root{
+    --western-bluebird:#2c5fca;
+    --tundra-swan: #e6d2b9;
+    --coot: #000106;
+    --light-blue: #C8D4E3;
+    --dark-blue: #a5b9e2;
+}
+
+
+/* body styles */
+body{
+    width: 90%;
+    background-color: rgba(235, 222, 206, 0.55);
+}
+
+body h2, h3{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/*main formatting*/
+main{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;;
+}
+
+#cute-duck{
+    margin-top: 12rem;
+    max-width:40%;
+}
+
+main h1{
+    text-align: center;
+    margin-top:1rem;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+main h3{
+    text-align: center;
+    font-size: 90%;
+    font-style: italic;
+    margin-bottom:1rem;
+}
+
+#contact-info, #bird-info, #finish-form{
+    border: 2px solid black;
+    padding:1em;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    margin-bottom: 1rem;
+    font-size: 110%;
+}
+
+legend{
+    font-size: 125%;
+    font-weight: bold;
+    color: var(--western-bluebird)
+}
+
+#contact-info input{
+    margin-left:6rem;
+    border-radius: 0.5rem;
+    margin-top:0.5rem;
+    height: 1.5rem;
+    width:15rem;
+    background-color: var(--tundra-swan);
+}
+
+#contact-info label{
+    position: absolute;
+    margin-top:0.5rem;
+    margin-bottom: 1rem;
+}
+
+/*https://www.geeksforgeeks.org/how-to-align-placeholder-text-in-html/*/
+input[type="tel"]{
+    padding-left: 0.3rem;
+    padding-bottom: 0.1rem;
+}
+
+#bird-info input{
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+#bird-info label{
+    position: absolute;
+}
+
+#file-upload{
+    position: absolute;
+    margin-right: 10rem;
+}
+
+select{
+    font-size:110%;
+}
+
+#opt-in{
+    margin-bottom: 1rem;
+}
+
+#opt-in-label{
+    font-size:80%;
+}
+#submit-buttons {
+    display: flex;
+    flex-direction: horizontal;
+    align-content: space-between;
+    gap:8rem; 
+
+}
+
+#submit-button, #reset-button{
+    height:2rem;
+    width:8rem;
+    padding:0.2rem;
+    border:2px solid var(--western-bluebird);
+    border-radius: 1rem;
+    box-shadow: none;
+    background-color: var(--tundra-swan);
+    font-size: 90%;
+}
+
+#opt-in-label em {
+    font-style: italic;
+}
+
+
+/*footer formatting*/
+footer p{
+    position: relative;
+}
+
+#footer-name{
+    right: 40%;
+    position:fixed;
+}

@@ -1,0 +1,416 @@
+/*
+Name: Brandon Smith
+Assignment: Term Project
+
+Sources: 
+https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t
+*/
+
+/*custom global variables*/
+:root{
+    --western-bluebird:#2c5fca;
+    --tundra-swan: #e6d2b9;
+    --coot: #000106;
+    --light-blue: #C8D4E3;
+    --dark-blue: #a5b9e2;
+    --dark-blue-light:rgba(168,185,226,.95);
+    --main-bg-color: rgba(202, 151, 44, 0.2);
+}
+
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+/*global styles*/
+
+h1{
+    font-size: 140%;
+}
+h2{
+    font-size: 120%;
+}
+h3{
+    font-size: 112.5%;
+}
+
+a{
+    color:var(--western-bluebird)
+}
+
+
+a:hover{
+    color:blue;
+}
+
+.small-menu{
+    display: none;
+}
+
+/* nav styles */
+nav{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--light-blue);
+    padding:0;
+    margin:auto;
+    margin-bottom: 2rem;
+    width:95%;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 125%;
+    padding: 0.5rem;
+}
+
+
+.menu .submenu{
+    list-style-type: none;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between; /*equal space between items*/
+    align-items: center; /*align vertical centers*/
+    flex-wrap: wrap;
+    padding:0.5rem;
+    gap:0rem;
+    font-size: 110%;
+    background-color: var(--light-blue);
+    list-style-type: none;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu li a{
+    display: block;
+    padding: 0.3rem 0.1rem;
+
+}
+
+.menu li.subitem a{
+    padding: 0.3rem 0.1rem;
+}
+
+.item{
+    position: relative;
+    display:block;
+    padding:1rem;
+    width:auto;
+    text-align: center;
+    
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after{
+    color:black;
+    text-decoration: underline;
+}
+
+/*submenus*/
+
+.submenu{
+    display:none;
+    padding:0.5rem;
+}
+
+.has-submenu > a::after{
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 900;
+    content: "\f078";
+    padding-left:0.4rem;
+}
+
+.submenu a{
+    padding: .675rem 1rem;
+    
+}
+
+.has-submenu:hover .submenu{
+    display: block;
+    position: absolute;
+    left:2rem;
+    top:4rem;
+    background-color: var(--dark-blue-light);
+    border-radius: 0.2rem;
+}
+
+
+.search{
+    display: none;
+    margin-right: 1rem;
+    padding: 0.5rem;
+}
+
+.search input, .search button{
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 75%;
+    padding:0.2rem;
+}
+
+
+
+
+/* body styles */
+body{
+    width: 95%;
+    background-color: var(--main-bg-color);
+}
+
+body h2, h3{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* main styles */
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 0px solid black;
+    gap:0;
+}
+
+
+/*#weekly-bird{
+    margin-left:auto;
+    margin-right: auto;
+    width:50%;
+}*/
+
+#weekly-bird h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 125%;
+    color:var(--western-bluebird);
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    
+}
+
+#weekly-bird-image{
+    border-radius: 1rem;
+    width:95%;
+    height:auto;
+}
+
+
+#grid-container{
+    padding: 0.5rem;
+    display: grid;
+    height:auto;
+    grid-template-columns: 50% 50%;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#grid-container img{
+    border-radius: 0.5rem;
+    height:auto;
+    padding-bottom: 0.5rem;
+}
+
+.grid-item{
+    border:0px solid var(--western-bluebird);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.grid-item a{
+    font-size: 120%;
+    text-decoration: none;
+}
+
+/* footer style */
+footer{
+    margin: 1rem;
+    background-color: var(--light-blue);
+    font-size: 110%;
+
+}
+
+footer ul{
+    margin: 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+#insta-logo{
+    margin: 1rem;
+    max-width:100%;
+    width:2rem;
+}
+
+
+/***********mobile menu***********/
+
+@media screen and (width < 500px) {
+    .menu{
+        display: none;
+    }
+    
+    nav{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color: var(--light-blue);
+        padding:0.5rem;
+        margin-left:auto;
+        width:95%;
+        border:1px solid black;
+        
+    }
+    
+    .logo{
+        font-weight: bold;
+        border:none;
+        font-size: 125%;
+        padding: 1rem 1rem 1rem 0.5rem;
+        text-align:center;
+    }
+    
+    
+    .small-menu .submenu{
+        list-style-type: none;
+        
+    }
+    
+    .small-menu{
+        display:flex;
+        flex-direction: column;
+        padding:0.5rem;
+        gap:1rem;
+        font-size: 120%;
+        background-color: var(--light-blue);
+        list-style-type: none;
+
+    }
+
+    .small-menu li{
+        margin:0px;
+        padding:0px;
+        text-align: left;
+    }
+
+    .has-submenu > a::after{
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 900;
+        content: "\f061";
+        padding-left:0.4rem;
+    }
+    
+    .small-menu a{
+        text-decoration: none;
+    }
+    
+    .small-menu li a{
+        display: block;
+        padding: 0.3rem 0.1rem;
+    }
+    
+    .small-menu li.subitem a{
+        padding: 0.3rem 0.1rem;
+    }
+    .item{
+        position: relative;
+        display:block;
+        padding:1rem;
+        width:auto;
+        text-align: center;
+        
+    }
+    
+    .active .item{
+        display: block;
+    }
+    
+    .item:not(.button) a:hover,
+    .item a:hover::after{
+        color:black;
+        text-decoration: underline;
+    }
+    
+    /*submenus*/
+    .submenu{
+        display:none;
+        padding:0.5rem;
+    }
+    
+    .submenu a{
+        padding: .675rem 1rem;
+        
+    }
+    
+    .has-submenu:hover .submenu{
+        display: none;
+        text-decoration: none;
+    }
+    
+    .search{
+        display:none;
+    }
+
+    #weekly-bird{
+        padding-top: 0.5rem;
+        font-size: .9rem;
+
+    }
+
+    #weekly-bird-image{
+        margin-top: 1rem;
+        margin-left:0.5rem;
+        padding:0.5rem
+    }
+
+    /*grid stuff*/
+
+    .grid-item{
+        padding:0.3rem;
+
+    }
+    .grid-item a{
+        font-size: .8rem;
+    }
+    
+    #eq-desc{
+        margin-bottom: 1rem;
+    }
+
+    #grid-container{
+        gap: .1rem;
+        grid-template-columns: 50% 50%;
+    }
+
+    footer{
+        margin-top: 2rem;
+    }
+
+    footer ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+}
